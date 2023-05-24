@@ -12,7 +12,7 @@ describe("Testing read file and sort data", function () {
     });
   });
 
-  it("Testing read of csv with valid file", function (done) {
+  it("Testing read of csv with invalid file", function (done) {
     Ecommerce.readFileContents("./testfile.csv", (err, fileContents) => {
       expect(err).to.not.be.equal(null);
       expect(err).to.be.equal("Encountered error while reading file contents..!");
