@@ -64,7 +64,13 @@ console.log(sortedData)
 
 //This method will write the sortedData in the output file
 const writeSortedDataToFile = (outputFileName, sortedData, cb) => {
- 
+ fs.writeFile(outputFileName, sortedData.join('\n'), (error)=>{
+  if(error){
+    cb(error)
+  }else{
+    cb(null)
+  }
+ })
 }
 
 
